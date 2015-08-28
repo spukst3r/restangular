@@ -1,6 +1,6 @@
 /**
  * Restful Resources service for AngularJS apps
- * @version v1.4.0 - 2015-04-03 * @link https://github.com/mgonto/restangular
+ * @version v1.5.1 - 2015-08-28 * @link https://github.com/mgonto/restangular
  * @author Martin Gontovnikas <martin@gon.to>
  * @license MIT License, http://www.opensource.org/licenses/MIT
  */(function() {
@@ -1353,3 +1353,15 @@ restangular.provider('Restangular', function() {
 });
 
 })();
+
+
+/**
+ * This lets you inject the module into angularjs using the commonjs require
+ * syntax with browserify.
+ */
+/* jshint ignore:start */
+if (typeof module !== 'undefined' && typeof exports !== 'undefined' && module.exports === exports){
+  var _ = require('lodash');
+  module.exports = 'restangular';
+}
+/* jshint ignore:end */
